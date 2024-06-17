@@ -14,7 +14,11 @@ const quizData = [
       options: ["Elephant", "Hippo", "Giraffe", "Lion"],
       answer: "Elephant"
     },
-  
+    {
+      question: "What does 'HTTP' stand for?",
+      options: ["HyperText Transfer Protocol", "Hyperlink Transfer Technology Protocol", "Hyperlink Text Transfer Protocol", "HyperText Technology Protocol"],
+      answer: "HyperText Transfer Protocol"
+    },
     {
       question: "Which programming language is known as the backbone of the World Wide Web?",
       options: ["Java", "C#", "Python", "HTML"],
