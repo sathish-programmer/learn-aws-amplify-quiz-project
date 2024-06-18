@@ -36,6 +36,13 @@ Here are the terminal commands in order of appearance of the video.
 
 `git push –u origin main`
 
+`amplify add api` to create database dynamoDB
+`amplify push` push to aws 
+
+Additional commends:
+---------
+`amplify codegen` to generate graphql queries if it not automatically generate
+
 ## Code Files
 
 - **App.js**: The React application that's configured to use Cognito for authentication

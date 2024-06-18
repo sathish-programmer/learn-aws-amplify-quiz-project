@@ -18,6 +18,9 @@ import awsExports from './aws-exports';
 // Imports the Quiz component from Quiz.js for use in this file.
 import Quiz from './Quiz';
 
+// import list song data from graphql queries
+import { listQuizzes } from './graphql/queries';
+
 // Configures the Amplify library with the settings from aws-exports.js, which includes all the AWS service configurations for this project.
 Amplify.configure(awsExports);
 

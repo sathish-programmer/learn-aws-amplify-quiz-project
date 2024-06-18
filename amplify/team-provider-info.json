@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "learnamplify8daa251b": {}
+      },
+      "api": {
+        "learnamplify": {}
+      },
+      "function": {
+        "QuizFunction": {}
       }
     }
   }
