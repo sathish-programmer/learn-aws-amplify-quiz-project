@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { listQuizzes } from './graphql/queries'; // Adjust this path if needed
-import { generateClient } from 'aws-amplify/api';
-// get table from dynamo db
-const client = generateClient();
+import QuizAPI from './api/QuizApi';
+import InsertQuiz from './InsertQuiz';
+
 function Quiz() {
   const [quizData, setQuizData] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -18,7 +17,7 @@ function Quiz() {
   // fetch questions from dynamo db
   const fetchQuizData = async () => {
     try {
-      const quizData = await client.graphql({ query: listQuizzes });
+      const quizData = await QuizAPI.listQuiz();
       const quizDetails = quizData.data.listQuizzes.items;
       console.log(quizDetails, 'quizDetails');
       setQuizData(quizDetails);
@@ -51,6 +50,7 @@ function Quiz() {
 
   return (
     <div className='quiz'>
+      <InsertQuiz onQuizInserted={fetchQuizData} />
       {showScore ? (
         <div className='score-section'>
           You scored {score} out of {quizData.length}
